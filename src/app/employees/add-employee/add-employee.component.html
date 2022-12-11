@@ -1,0 +1,45 @@
+
+<div class="add-employee">
+    <form [formGroup]="addEmployeeForm">
+        <div class="card">
+            <div class="card-header">
+                <h2>{{employeeId == 'new' ? 'Add Employee' : 'Update Employee'}}</h2>
+            </div>
+            <div class="card-content">
+                
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input formControlName="employee_name" type="text" [class]="checkError('employee_name') ? 'form-control error' : 'form-control'" id="name">
+                        <ng-container *ngIf="checkError('employee_name')">
+                            <small class="error-message">Name is required</small>
+                        </ng-container>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input formControlName="employee_age" type="number" [class]="checkError('employee_age') ? 'form-control error' : 'form-control'" id="age">
+                        <ng-container *ngIf="checkError('employee_age')">
+                            <small class="error-message">Age is required</small>
+                        </ng-container>
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Salary</label>
+                        <input formControlName="employee_salary" type="number" [class]="checkError('employee_salary') ? 'form-control error' : 'form-control'" id="salary">
+                        <ng-container *ngIf="checkError('employee_salary')">
+                            <small class="error-message">Salary is required</small>
+                        </ng-container>
+                    </div>
+            </div>
+            <div class="card-footer">
+                <div class="action-btns">
+                    <div *ngIf="loader" class="loader">
+                        <div class="spinner-border" role="status">
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    <button *ngIf="!loader" type="submit" class="btn btn-success" (click)="submit()" [disabled]="addEmployeeForm.invalid">{{employeeId == 'new' ? 'Submit' : 'Update'}}</button>
+                    <button type="submit" class="btn btn-danger" (click)="cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+.employees-list{
+    margin: 20px;
+}
+.remove-icon{
+    color: rgb(147, 0, 0);
+}
+.action-btns{
+    display: flex;
+    gap: 5px;
+}
+.loader{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+.page-item{
+    cursor: pointer;
+}
+.disabled{
+    pointer-events: none;
+}
+.mb-10{
+    margin-bottom: 10px;
+}

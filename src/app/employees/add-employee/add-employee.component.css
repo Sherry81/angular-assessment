@@ -1,0 +1,36 @@
+.card{
+    margin: 20px 30%;
+}
+.card-content{
+    padding: 30px;
+}
+.action-btns{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+}
+.spinner-border{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.15em;
+}
+.error-message{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 2;
+}
+.error{
+    border-color: red;
+}
+@media screen and (max-width: 768px){
+    .card{
+        margin: 20px;
+    }
+}

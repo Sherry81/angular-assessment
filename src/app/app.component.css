@@ -1,0 +1,9 @@
+.alert{
+    width: 25%;
+    position: absolute;
+    right: 20px;
+    z-index: 999;
+}
+.alert-heading{
+    text-transform: capitalize;
+}
