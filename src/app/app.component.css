@@ -7,3 +7,8 @@
 .alert-heading{
     text-transform: capitalize;
 }
+@media screen and (max-width: 768px){
+    .alert{
+        width: 45%;
+    }
+}

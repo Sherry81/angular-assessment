@@ -11,7 +11,7 @@
       <div class="col-lg-12">
         <div class="table-responsive"> 
 
-          <table *ngIf="!loader" class="table table-bordered">
+          <table *ngIf="!loader && employees.length" class="table table-bordered">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -44,11 +44,13 @@
                 </tr>
               </tbody>
             </table>
-
+            <div *ngIf="!loader && !employees.length" class="not-found">
+              <h2>No Employees found</h2>
+            </div>
         </div>
       </div>
     </div>
-      <nav *ngIf="!loader" aria-label="Page navigation example">
+      <nav *ngIf="!loader && employees.length > 10" aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
           <li [class]="pageNo == 1 ? 'page-item disabled' : 'page-item'" (click)="pageNo = pageNo - 1">
             <a class="page-link" aria-label="Previous">

@@ -1,5 +1,5 @@
 .employees-list{
-    margin: 20px;
+    margin: 30px 50px;
 }
 .remove-icon{
     color: rgb(147, 0, 0);
@@ -21,4 +21,17 @@
 }
 .mb-10{
     margin-bottom: 10px;
+}
+.not-found{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    color: rgb(197, 197, 197);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+    .employees-list{
+        margin: 20px;
+    }
 }
