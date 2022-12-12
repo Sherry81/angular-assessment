@@ -5,7 +5,11 @@ import { EmployeesListComponent } from './employees/employees-list/employees-lis
 const routes: Routes = [
   {
     path: '',
-    component: EmployeesListComponent
+    children: [
+      {
+        path: '',      
+        loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule)
+      }]
   },
 ];
 
